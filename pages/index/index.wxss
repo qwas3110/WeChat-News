@@ -1,0 +1,109 @@
+/* 导航栏 */
+/* 高度 10 + 45 =  55 */
+.nav {
+	display: flex;
+	justify-content: space-around;
+	background-color: #6495ED;
+	padding-bottom: 10rpx;
+}
+
+.nav-item {
+	font-size: 30rpx;
+	line-height: 45rpx;
+	font-weight: bold;
+	color: #fff
+}
+
+/* 热门新闻 */
+/* 高度 35 + 50 + 230 + 35 = 350 */
+.hot {
+	position: relative;
+	margin: 30rpx 20rpx;
+	border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.hot-title {
+	width: 80rpx;
+	font-size: 25rpx;
+	line-height: 35rpx;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0);
+	border-radius: 5px;
+	background-color: rgba(255, 0, 0, 0.6);
+	position: absolute;
+	right: 0;
+	
+}
+
+.hot-item {
+	font-size: 30rpx;
+	line-height: 50rpx;
+	font-weight: bold;
+	color: white;
+	padding-top: 230rpx;
+}
+
+.hot-desc {
+	display: flex;
+	font-size: 25rpx;
+	line-height: 35rpx;
+	color: rgba(0, 0, 0, 0.541);
+	font-weight: bold;
+	padding-bottom: 10rpx;
+	padding-left: 20rpx;
+}
+
+.hot-link {
+	padding-right: 20rpx;
+}
+
+.hot-item {
+	padding-left: 20rpx;
+}
+
+.hot-bg {
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	position: absolute;
+	top: 0;
+}
+
+/* 新闻介绍 */
+
+.newsView {
+	display: flex;
+	margin: 30rpx 20rpx;
+	border: 1px solid rgba(0, 0, 0, 0);
+	border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);
+	padding-bottom: 30rpx;
+}
+
+.view-title {
+	font-size: 30rpx;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.726)
+}
+
+.view-desc {
+	display: flex;
+	font-size: 25rpx;
+	font-weight: bold;
+	padding-top: 20rpx;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.view-link {
+	padding-right: 10rpx;
+}
+
+.view-time {
+
+}
+
+.view-icon {
+	width: 300rpx;
+	height: 150rpx;
+}
