@@ -1,6 +1,7 @@
 /* 导航栏 */
 /* 高度 10 + 45 =  55 */
 .nav {
+	position: relative;
 	display: flex;
 	justify-content: space-around;
 	background-color: #6495ED;
