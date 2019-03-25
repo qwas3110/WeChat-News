@@ -1,95 +1,45 @@
 <!-- 导航链接 -->
 <view class='nav'>
-	<navigator class='nav-item'>国内</navigator>
-	<navigator class='nav-item'>国际</navigator>
-	<navigator class='nav-item'>财经</navigator>
-	<navigator class='nav-item'>娱乐</navigator>
-	<navigator class='nav-item'>军事</navigator>
-	<navigator class='nav-item'>体育</navigator>
-	<navigator class='nav-item'>其他</navigator>
+  <navigator class='nav-item'>国内</navigator>
+  <navigator class='nav-item'>国际</navigator>
+  <navigator class='nav-item'>财经</navigator>
+  <navigator class='nav-item'>娱乐</navigator>
+  <navigator class='nav-item'>军事</navigator>
+  <navigator class='nav-item'>体育</navigator>
+  <navigator class='nav-item'>其他</navigator>
 </view>
 
 <!-- 热门新闻 -->
 <view class='hot'>
-	<view class='hot-title'>热门</view>
-	<view class='hot-item'>官湖村陈生：上北大车票是乡亲凑的，赠别墅遇尴尬两年没回乡</view>
-	<view class='hot-desc'>
-		<view class='hot-link'>上游新闻</view>
-		<view class='hot-time'>10:22</view>
-	</view>
-	<image 
-		class='hot-bg' 
-		src='/images/show.png'
-		mode='scaleToFill'
-		>
-	</image>
+  <view class='hot-title'>热门</view>
+  <view class='hot-item'>{{hot.title}}</view>
+  <view class='hot-desc'>
+    <view class='hot-link'>{{hot.source}}</view>
+    <view class='hot-time'>{{hot.time}}</view>
+  </view>
+  <image class='hot-bg' src='{{hot.imgSrc}}' mode='scaleToFill'>
+  </image>
 </view>
 
 <!-- 新闻概览 -->
-<view class='newsView'>
-	<view class='view-title'>
-		<view>陈敏尔：拥抱新时代，践行新思想实现新作为</view>
-		<view class="view-desc">
-			<view class='view-link'>人民日报</view>
-			<view class='view-time'>04:09</view>
-		</view>
-	</view>
-	<image 
-		class='view-icon' 
-		src='/images/show.png'
-		mode='scaleToFill'
+<view 
+	wx:for='{{newsList}}'
+	wx:for-item='news'
+	wx:key='*this'
+	>
+  <view class='newsView'>
+    <view class='view-title'>
+      <view>{{news.title}}</view>
+      <view class="view-desc">
+        <view class='view-link'>{{news.source}}</view>
+        <view class='view-time'>{{news.time}}</view>
+      </view>
+    </view>
+    <image 
+			class='view-icon' 
+			src='{{news.imgSrc}}' 
+			mode='scaleToFill'
 		>
-	</image>
-</view>
-
-<view class='newsView'>
-	<view class='view-title'>
-		<view>陈敏尔：拥抱新时代，践行新思想实现新作为</view>
-		<view class="view-desc">
-			<view class='view-link'>人民日报</view>
-			<view class='view-time'>04:09</view>
-		</view>
-	</view>
-	<image 
-		class='view-icon' 
-		src='/images/show.png'
-		mode='scaleToFill'
-		>
-	</image>
-</view>
-
-
-
-<view class='newsView'>
-	<view class='view-title'>
-		<view>陈敏尔：拥抱新时代，践行新思想实现新作为</view>
-		<view class="view-desc">
-			<view class='view-link'>人民日报</view>
-			<view class='view-time'>04:09</view>
-		</view>
-	</view>
-	<image 
-		class='view-icon' 
-		src='/images/show.png'
-		mode='scaleToFill'
-		>
-	</image>
-</view>
-
-
-
-<view class='newsView'>
-	<view class='view-title'>
-		<view>陈敏尔：拥抱新时代，践行新思想实现新作为</view>
-		<view class="view-desc">
-			<view class='view-link'>人民日报</view>
-			<view class='view-time'>04:09</view>
-		</view>
-	</view>
-	<image 
-		class='view-icon' 
-		src='/images/show.png'
-		mode='scaleToFill'
-		>
-	</image>
+    </image>
+  </view>
 </view>
