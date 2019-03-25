@@ -1,27 +1,26 @@
 <view class='news-detail'>
-	<view class='news-title'>又一批国产教练机完成交付试飞，即将“入伍”</view>
+	<view class='news-title'>{{newsDetail.title}}</view>
 
 	<view class='news-desc'>
 		<view class='news-link-time'>
-			<view class='news-link'>洪都先锋</view>
-			<view class='news-time'>10:03</view>
+			<view class='news-link'>{{newsDetail.source}}</view>
+			<view class='news-time'>{{newsDetail.date}}</view>
 		</view>
-		<view class='news-reading'>阅读 1470</view>
+		<view class='news-reading'>阅读 {{newsDetail.readCount}}</view>
 	</view>
 
-	<view class='news-text'>
-		阿斯顿卡拉斯京的垃圾似的老舅离开家阿斯顿卡拉斯京的垃圾似的老舅离开家
-		阿斯顿卡拉斯京的垃圾似的老舅离开家。
-	</view>
-	<image 
-		class='news-img'
-		src='/images/show.png'
+	<view 
+		class='news-basic-text'
+		wx:for="{{newsContent}}"
+		wx:for-item="news"
+		wx:key='item.id'
 		>
-	</image>
-	<view class='news-text'>
-		阿斯顿卡拉斯京的垃圾似的老舅离开家阿斯顿卡拉斯京的垃圾似的老舅离开家
-		阿斯顿卡拉斯京的垃圾似的老舅离开家阿斯顿卡拉斯京的垃圾似的老舅离开家
-		阿斯顿卡拉斯京的垃圾似的老舅离开家阿斯顿卡拉斯京的垃圾似的老舅离开家
-		阿斯顿卡拉斯京的垃圾似的老舅离开家阿斯顿卡拉斯京的垃圾似的老舅离开家
+		<view class='news-text'>{{news.text}}</view>
+		<image
+			wx:if="{{news.src}}" 
+			class="news-img"
+			src='{{news.src}}'
+			>
+		</image>
 	</view>
 </view>

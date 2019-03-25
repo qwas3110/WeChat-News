@@ -1,16 +1,23 @@
 <!-- 导航链接 -->
-<view class='nav'>
-  <navigator class='nav-item'>国内</navigator>
-  <navigator class='nav-item'>国际</navigator>
-  <navigator class='nav-item'>财经</navigator>
-  <navigator class='nav-item'>娱乐</navigator>
-  <navigator class='nav-item'>军事</navigator>
-  <navigator class='nav-item'>体育</navigator>
-  <navigator class='nav-item'>其他</navigator>
+<view class='nav-warpper'>
+  <view class='nav' wx:for='{{typeMap}}' wx:for-item='type' wx:key='index'>
+    <button 
+			class='nav-item'
+			plain="true"
+			bindtap='onTapNews'
+			data-type='{{type}}'
+			>
+      {{type}}
+    </button>
+  </view>
 </view>
 
 <!-- 热门新闻 -->
-<view class='hot'>
+<view 
+	class='hot' 
+	bindtap='onTapNewsDetail'
+	data-id='{{hot.id}}'
+	>
   <view class='hot-title'>热门</view>
   <view class='hot-item'>{{hot.title}}</view>
   <view class='hot-desc'>
@@ -23,9 +30,11 @@
 
 <!-- 新闻概览 -->
 <view 
-	wx:for='{{newsList}}'
-	wx:for-item='news'
-	wx:key='*this'
+	wx:for='{{newsList}}' 
+	wx:for-item='news' 
+	bindtap='onTapNewsDetail'
+	data-id='{{news.id}}'
+	wx:key='news.id'
 	>
   <view class='newsView'>
     <view class='view-title'>
@@ -35,11 +44,7 @@
         <view class='view-time'>{{news.time}}</view>
       </view>
     </view>
-    <image 
-			class='view-icon' 
-			src='{{news.imgSrc}}' 
-			mode='scaleToFill'
-		>
+    <image class='view-icon' src='{{news.imgSrc}}' mode='scaleToFill'>
     </image>
   </view>
 </view>

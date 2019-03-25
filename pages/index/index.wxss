@@ -1,18 +1,23 @@
 /* 导航栏 */
 /* 高度 10 + 45 =  55 */
-.nav {
-	position: relative;
+.nav-warpper {
 	display: flex;
-	justify-content: space-around;
-	background-color: #6495ED;
-	padding-bottom: 10rpx;
+	background-color:#6495ED;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.nav {
+	display: flex;
+	flex-shrink: 0;
 }
 
 .nav-item {
-	font-size: 30rpx;
-	line-height: 45rpx;
-	font-weight: bold;
-	color: #fff
+	font-size: 30rpx!important;
+	padding-left: 5rpx;
+	padding-right: 5rpx;
+	margin: 20rpx;
+	font-weight: bolder!important;
+	border: none!important;
+	color: #fff!important;
 }
 
 /* 热门新闻 */
