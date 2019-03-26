@@ -1,9 +1,31 @@
+.title {
+	display: flex;
+	align-items: center;
+	padding-top: 70rpx;
+	padding-bottom: 10rpx;
+	padding-left: 20rpx;
+	background-color: #6495ED;
+}
+
+.title-icon {
+	width: 30rpx;
+	height: 30rpx;
+	padding-right: 10rpx;
+}
+
+.title-text {
+	font-size: 30rpx;
+	line-height: 42rpx;
+}
+
+
 /* 导航栏 */
 /* 高度 10 + 45 =  55 */
 .nav-warpper {
 	display: flex;
 	background-color:#6495ED;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	padding-top: 5rpx;
 }
 .nav {
 	display: flex;
@@ -14,7 +36,9 @@
 	font-size: 30rpx!important;
 	padding-left: 5rpx;
 	padding-right: 5rpx;
-	margin: 20rpx;
+	/* margin: 20rpx; */
+	margin-left: 20rpx;
+	margin-right: 20rpx;
 	font-weight: bolder!important;
 	border: none!important;
 	color: #fff!important;
