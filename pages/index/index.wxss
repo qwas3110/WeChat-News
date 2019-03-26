@@ -1,3 +1,4 @@
+/* 标题栏 */
 .title {
 	display: flex;
 	align-items: center;
@@ -16,6 +17,9 @@
 .title-text {
 	font-size: 30rpx;
 	line-height: 42rpx;
+	font-weight: bolder;
+	font-family: serif;
+	color: #fff;
 }
 
 
@@ -64,7 +68,10 @@
 	background-color: rgba(255, 0, 0, 0.6);
 	position: absolute;
 	right: 0;
-	
+	border-top-left-radius:2em;
+	border-top-right-radius:2em;
+	border-bottom-right-radius:2em;
+	border-bottom-left-radius:10em;
 }
 
 .hot-item {
