@@ -6,12 +6,16 @@ Page({
 		newsContent: []
 		
 	},
+	onPullDownRefresh() {
+		this.getNewsDetail(() => wx.stopPullDownRefresh());
+	},
+
 	onLoad(options) {
 		this.setData({ id: options.id });
 		this.getNewsDetail();
 		
 	},
-	getNewsDetail() {
+	getNewsDetail(callback) {
 		wx.request({
 			url: 'https://test-miniprogram.com/api/news/detail',
 			data: {
@@ -23,6 +27,10 @@ Page({
 				console.log(result);
 				this.setBasicInfomation(result);
 				this.setNewsBasicText(result);
+			},
+
+			completeL: () => {
+				callback && callback() 
 			}
 		})
 	},

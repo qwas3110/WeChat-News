@@ -1,4 +1,33 @@
+/* 头部 */
 
+/* 标题栏 */
+.title {
+	display: flex;
+	align-items: center;
+	padding-top: 70rpx;
+	padding-bottom: 10rpx;
+	padding-left: 20rpx;
+	background-color: #fff;
+}
+
+.title-icon {
+	width: 30rpx;
+	height: 30rpx;
+	padding-right: 10rpx;
+}
+
+.title-text {
+	font-size: 30rpx;
+	line-height: 42rpx;
+	font-weight: bolder;
+	font-family: serif;
+	color: black;
+}
+
+
+
+
+/* 新闻标题 */
 .news-detail {
 	display: flex;
 	flex-direction: column;

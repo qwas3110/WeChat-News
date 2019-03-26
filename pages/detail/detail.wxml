@@ -1,3 +1,9 @@
+<view class='title'>
+	<image class='title-icon' src='/images/news.svg'></image>
+	<view class='title-text'>快读·资讯</view>
+</view>
+
+
 <view class='news-detail'>
 	<view class='news-title'>{{newsDetail.title}}</view>
 
