@@ -47,7 +47,7 @@
       <view>{{news.title}}</view>
       <view class="view-desc">
         <view class='view-link'>{{news.source}}</view>
-        <view class='view-time'>{{news.time}}</view>
+        <view class='view-time'>{{news.date}}</view>
       </view>
     </view>
     <image class='view-icon' src='{{news.imgSrc}}' mode='scaleToFill'>

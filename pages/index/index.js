@@ -58,11 +58,11 @@ Page({
   setHotNews(result) {
     let hot = {};
     hot.title = result.title || '未知来源';
-    hot.date = result.date.slice(0, 10),
-      hot.time = result.date.slice(14, 19),
-      hot.source = result.source,
-      hot.imgSrc = `${result.firstImage}`,
-      hot.id = result.id
+    hot.date = result.date.slice(0, 10);
+    hot.time = result.date.slice(14, 19);
+    hot.source = result.source;
+    hot.imgSrc = `${result.firstImage}`;
+    hot.id = result.id;
 
     this.setData({
       hot: hot
@@ -76,7 +76,7 @@ Page({
       newsList.push({
         id: result[x].id,
         title: result[x].title || '未知来源',
-        time: result[x].date.slice(14, 19),
+        date: result[x].date.slice(0, 10),
         source: result[x].source,
         imgSrc: `${result[x].firstImage}`
       })
